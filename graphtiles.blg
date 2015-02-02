@@ -1,0 +1,82 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: graphtiles.aux
+The style file: acm-sigchi.bst
+Database file #1: sample.bib
+Repeated entry---line 207 of file sample.bib
+ : @inproceedings{Church:2011
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 226 of file sample.bib
+ :  @inproceedings{1143118
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 324 of file sample.bib
+ : @misc{imdb
+ :           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 329 of file sample.bib
+ : @misc{linkedin
+ :               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 334 of file sample.bib
+ : @misc{pandora
+ :              ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in imdb
+Warning--to sort, need author or key in linkedin
+Warning--to sort, need author or key in pandora
+Warning--to sort, need author or key in Facebook
+Warning--to sort, need author or key in seattleband
+Warning--empty author in imdb
+Warning--empty journal in imdb
+Warning--empty author in linkedin
+Warning--empty journal in linkedin
+Warning--empty author in pandora
+Warning--empty journal in pandora
+Warning--empty author in seattleband
+Warning--empty journal in seattleband
+Warning--empty journal in springerlink:10.1007/978-3-642-18469-7-14
+Warning--empty booktitle in RefWorks:896
+You've used 21 entries,
+            2243 wiz_defined-function locations,
+            661 strings with 7710 characters,
+and the built_in function-call counts, 7814 in all, are:
+= -- 785
+> -- 295
+< -- 0
++ -- 126
+- -- 102
+* -- 527
+:= -- 1138
+add.period$ -- 59
+call.type$ -- 21
+change.case$ -- 113
+chr.to.int$ -- 0
+cite$ -- 36
+duplicate$ -- 353
+empty$ -- 665
+format.name$ -- 102
+if$ -- 1753
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 20
+newline$ -- 104
+num.names$ -- 34
+pop$ -- 140
+preamble$ -- 1
+purify$ -- 92
+quote$ -- 0
+skip$ -- 274
+stack$ -- 0
+substring$ -- 534
+swap$ -- 113
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 84
+warning$ -- 15
+while$ -- 69
+width$ -- 23
+write$ -- 215
+(There were 5 error messages)

@@ -1,0 +1,361 @@
+\documentclass{sigchi}
+
+% Use this command to override the default ACM copyright statement (e.g. for preprints). 
+% Consult the conference website for the camera-ready copyright statement.
+
+
+%% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
+% \toappear{Permission to make digital or hard copies of all or part of this work for personal or classroom use is 	granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. \\
+% {\emph{CHI'14}}, April 26--May 1, 2014, Toronto, Canada. \\
+% Copyright \copyright~2014 ACM ISBN/14/04...\$15.00. \\
+% DOI string from ACM form confirmation}
+%% EXAMPLE END -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
+
+
+% Arabic page numbers for submission. 
+% Remove this line to eliminate page numbers for the camera ready copy
+\pagenumbering{arabic}
+
+
+% Load basic packages
+\usepackage{balance}  % to better equalize the last page
+\usepackage{graphics} % for EPS, load graphicx instead
+\usepackage{graphicx}
+\usepackage{times}    % comment if you want LaTeX's default font
+\usepackage{url}      % llt: nicely formatted URLs
+\usepackage[T1]{fontenc} 
+\usepackage{subfigure}
+\usepackage{balance}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{times}
+%\usepackage{slashbox}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{array}
+\usepackage[table]{xcolor}
+% http://ctan.org/pkg/xcolor   %{colortbl}
+%\usepackage{slashbox}
+\usepackage{colortbl}
+\usepackage{color}
+\definecolor{dark_green}{rgb}{0.2, 0.8, 0.0}
+\definecolor{dark_yellow}{rgb}{0.9, 0.6, 0.1} %{0.6, 0.4, 0.2}
+\usepackage{makecell}
+\usepackage{tikz}
+
+
+% llt: Define a global style for URLs, rather that the default one
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\bf\ttfamily}}}
+\makeatother
+\urlstyle{leo}
+
+
+% To make various LaTeX processors do the right thing with page size.
+\def\pprw{8.5in}
+\def\pprh{11in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+
+% Make sure hyperref comes last of your loaded packages, 
+% to give it a fighting chance of not being over-written, 
+% since its job is to redefine many LaTeX commands.
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+pdftitle={SIGCHI Conference Proceedings Format},
+pdfauthor={LaTeX},
+pdfkeywords={SIGCHI, proceedings, archival format},
+bookmarksnumbered,
+pdfstartview={FitH},
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=black,
+breaklinks=true,
+}
+
+%\usepackage{ftnright}
+
+% create a shortcut to typeset table headings
+\newcommand\tabhead[1]{\small\textbf{#1}}
+\newcommand{\vidya}[1]{\textcolor{red}{(vidya: #1)}}
+\newenvironment{tight_itemize}{\begin{itemize} \itemsep
+-2pt}{\end{itemize}}
+\newenvironment{tight_enumerate}{\begin{enumerate} \itemsep
+-2pt}{\end{enumerate}}
+
+
+\toappear 
+
+\teaser{
+\centering
+\includegraphics[width=7in]{images/teaser}
+\caption{Comparing \textit{GraphTiles} with IMDb's mobile website. (a) and (b): The MPM(Movie-person-movie) \textit{QueryType}; (c) and (d): the PMP(Person-movie-person) \textit{QueryType}.}
+\label{fig:teaser}
+}
+
+
+
+% End of preamble. Here it comes the document.
+\begin{document}
+
+\title{GraphTiles: A Visual Interface for Mobile Search \\ and Data Exploration}
+%
+%\numberofauthors{3}
+%\author{
+%  \alignauthor 1st Author Name\\
+%    \affaddr{Affiliation}\\
+%    \affaddr{Address}\\
+%    \email{e-mail address}\\
+%    \affaddr{Optional phone number}
+%  \alignauthor 2nd Author Name\\
+%    \affaddr{Affiliation}\\
+%    \affaddr{Address}\\
+%    \email{e-mail address}\\
+%    \affaddr{Optional phone number}    
+%  \alignauthor 3rd Author Name\\
+%    \affaddr{Affiliation}\\
+%    \affaddr{Address}\\
+%    \email{e-mail address}\\
+%    \affaddr{Optional phone number}
+%}
+
+
+\maketitle
+
+\toappear
+
+\begin{abstract}
+Mobiles are generating a rapidly increasing proportion of search queries, ranging from specific fact-finding to unstructured exploration. Yet, search interfaces have not changed significantly to accommodate mobile constraints. Mobile search can be particularly challenging when traversing and learning about data relationships, such as those described in IMDb~\cite{imdb} and LinkedIn~\cite{linkedin}. We examined the prevalence of these mobile search use cases in a two-week diary study. We hypothesized that the ability to view a link neighborhood around the search result could be quite helpful, particularly for more imprecise, open queries. For example, one user reported searching for the location where `The sisterhood of the traveling pants' was filmed. Although their search was successful, it was difficult. A visual overview of such relationships could have been very helpful. To provide such overviews, we designed \textit{GraphTiles}, a visual interface supporting mobile search. In an experimental evaluation, users found information more quickly with \textit{GraphTiles} than with a standard mobile site.
+
+\end{abstract}
+
+\keywords{
+	 Mobile search, connected data, imprecise queries.
+	%\textcolor{red}{Mandatory section to be included in your final version.}
+}
+
+
+\category{H.5.m.}{Information Interfaces and Presentation (e.g. HCI)}{Miscellaneous}
+
+%See: \url{http://www.acm.org/about/class/1998/}
+%for more information and the full list of ACM classifiers
+%and descriptors. 
+%\textcolor{red}{Mandatory section to be included in your
+%final version. On the submission page only the classifiers'
+%letter-number combination will need to be entered.}
+
+
+
+
+
+
+\section{Introduction}
+
+\input{intro}
+
+\section{Contributions}
+\input{contributions}
+
+
+\section{Related Work}
+\input{relatedwork}
+
+
+\section{Diary Study}
+\input{diary_design}
+\input{diary_results}
+
+
+
+\section{The GraphTiles interface}
+We designed \textit{GraphTiles} to help mobile search users handle three challenging search types: open, exploratory search, where information foraging behavior is opportunistic and direction is weak at best; ill-formed search, where direction is known but difficult to articulate; and near miss searches, where the direction can be articulated, but the search engine leaves users some distance away from desired information. All of these search types would benefit from an interface that displays some of the local information neighborhood, allowing users to approach their information more directly. 
+We designed \textit{GraphTiles} to be such an interface. 
+
+With \textit{GraphTiles} (Figure \ref{fig:teaser} (a),(c)), we assume that users will employ search to find a locality of concern around a central node (e.g. for IMDb, ``near John Wayne"). As discussed above, position in the layout reflects link distance from the center. When necessary, users can drag a non-central node to the left to change the central node.We display links largely implicitly: every node in the middle column has an implied link to the central node, and every node in the right column is reachable from the middle column. To represent links between the middle and right columns we support both explicit link display and interactive reordering around a selected link. Explicit links appear only when both linked nodes are currently displayed. Reordering has the added benefit of accelerating access to off-screen nodes.
+
+We considered a circular (or rectangular) layout to make better use of the blank space in the left column, with a scroll around the central node rather than along it, but discarded it so that we could provide a glimpse of a larger two-link neighborhood. A circular layout with a two-link neighborhood would require much smaller nodes (difficult to touch with a finger tip), and would fit poorly in rectangular mobile displays.
+
+IMDb is largely a bipartite graph, with movies linking to crew members and vice versa. \textit{GraphTiles} quite appropriately exploits this in its interface, putting movies in one column, crew in the next, and assuming that there are no links between nodes in the same column. When graphs are not bipartite, representing within-column links explicitly is awkward at best. We generalize \textit{GraphTiles} to all graphs by relying on interactive reordering alone, and demonstrate this with a second database, the Seattle Band Map.
+
+
+\section{Experiment: Comparison to IMDb's mobile site}
+
+As a summative evaluation, we compared \textit{GraphTiles} to IMDb's mobile site. In \textit{GraphTiles}, we used both interactive reordering and the best explicit link representation, ---connecting nodes with lines ---a result from our other experiment (below). 
+
+Our experiment focused on helping users answer ill-formed queries. In the context of IMDb, users often want to recommend a movie to a friend, but cannot remember the name of that movie, nor the name of any actors in that movie. They do however know that one of the actors in the movie was also in a movie they know. They move from movie to actor to movie. Movie buffs also often try their hand at casting future films. They cannot remember the actor's name, nor the name of the movie they remember them from. But, they do remember the name of a second actor in that movie. Thus, they move from actor to movie to actor.
+We focused on answering imprecise queries of the same type. (We assumed that IMDb's mobile web app is a better solution for more precise queries such as ``The movies that John Wayne has acted in"). 
+
+Figure \ref{fig:teaser} shows a comparison of the visuals used in \textit{GraphTiles} and IMDb's mobile website to answer the movie-person-movie(MPM) and person-movie-person(PMP) \textit{QueryTypes}. We expected that \textit{GraphTiles} would allow users to find answers to imprecise queries more quickly than IMDb's web app.
+
+
+
+
+\subsection{Methods}
+
+We compared \textit{GraphTiles} to IMDb's mobile site in an experiment with twenty participants, all of them employees at a large corporate research center. Each participant performed 120 information seeking tasks, using the same graph neighborhoods we used in our first experiment.
+
+We used a fully crossed within subjects $2 \times 2$ design. As participants performed the tasks, we systematically altered two variables. \textit{Interface}, or the tool used to access the IMDb information, had two levels: \textit{GraphTiles} and the IMDb web app. \textit{QueryType} had two levels: a movie-person-movie (MPM) query or a person-movie-person (PMP) query. 
+ If \textit{QueryType} was MPM, we asked participants to find the person who worked in two given movies. In this case, the central node at the left of the visualization was always a movie. If \textit{QueryType} was PMP, we asked participants to find the movie on which two given people collaborated. In this case, the central node at the left of the visualization was always a person. To answer the question, participants used a phone to scroll in the right column to find the second person's node, and then scroll in the middle column to find the movie connecting the two people, and select it.
+
+In addition to displaying link lines, \textit{GraphTiles} here implemented interactive reordering, which highlights nodes' links to a selected node and moves them onscreen. Every participant performed 30 trials with each of the $2 \times 2 = 4$ experimental treatments. We grouped trials by \textit{Interface} into two blocks of 60 trials each. Thus participants performed all trials with the current Interface before moving on to the next. To combat the effects of fatigue and learning, we used complete counterbalancing across participants: half of them performed the \textit{GraphTiles} block first, the other half the web app block first. Within each of these blocks, we randomly ordered the levels of \textit{QueryType}. We randomized the order of graph neighborhoods without replacement, so that each participant saw each neighborhood exactly once.
+
+\begin{figure*}[t]
+\centering
+\subfigure[Band and artist relationship]{\includegraphics[width=1.4in]{images/bab}}
+\subfigure[Band relationship]{\includegraphics[width=1.4in]{images/bbb}}
+\subfigure[Interactive reordering with dimmed image when not related.]{\includegraphics[width=1.4in]{images/fartz_reordering}}
+\caption{Applying \textit{GraphTiles} to Seattle's music band data.}
+\label{fig:musicband}
+\end{figure*}
+
+\subsubsection{Apparatus}
+
+We implemented our interface on three Samsung SGH-i917 phones running Windows Phone 7.5, with an AMOLED display and a full capacitive touch screen. The monitor used to display questions was a $1920 \times 1200$ pixel Dell 24''. Participants interacted with the visualization on a phone by scrolling with a swipe gesture or selecting nodes with a long tap.
+
+We obtained our IMDb graph neighborhoods using the official IMDb API, obtaining a large cross section of its database (approximately 3GB in size). We then randomly selected 60 nodes within the IMDb graph describing well known actors (supporting PMP queries), and 60 nodes describing well known movies (supporting MPM queries). We then sampled the two-link neighborhood around each actor (PMP) node by adding the top movies linked to it as indicated by IMDb's own API call; and then for each of those top movies, adding its top actors, again as indicated by IMDb's API call. We created two-link neighborhoods around movie (MPM) nodes similarly. The number of top movies returned by IMDb's API was generally much lower than the number of top actors. 
+
+
+\subsection{Results and discussion}
+
+All participants performed all trials correctly, so we report only completion times here. We tested significance using a two-factor repeated measures ANOVA. Only the two single variable effects were significant; they did not interact. 
+
+When using \textit{GraphTiles}, participants were significantly ($F(1,19)=2291.833$, $p<0.001$) faster than when using the IMDb web app. Average completion time with \textit{GraphTiles} was 18.2s (SD 5.27), while with IMDb web app, it was 31.5s (SD 5.26).
+
+Although its effect was significant ($F(1,19)=11.27$, $p<0.005$), \textit{QueryType}'s effect was not meaningful. The difference in completion times when participants looked for movies rather than persons was 0.6s: (25.0s for movies, 24.4s for persons). 
+
+
+Results in fact exceeded our expectations, with \textit{GraphTiles} users almost twice as fast as IMDb web app users. \textit{GraphTiles} was designed for imprecise queries; IMDb probably was not. What remains to be seen is whether or not a single interface can support both precise and imprecise queries well.
+
+
+\section{GraphTiles in non-bipartite graphs}
+
+While real and practical, the IMDb graph is bipartite: nodes contain either people (e.g. actors) or movies. \textit{GraphTiles} quite appropriately exploits this structure, placing people and movies in different columns. However if \textit{GraphTiles} is to find use with more general applications, it must be tested with non-bipartite graphs. 
+
+With this goal in mind, we used \textit{GraphTiles} to the Seattle Band Map ~\cite{seattleband}. In this database, music bands from the Pacific Northwest are linked if they share band members or have collaborated with one another. By preprocessing the database, we could create a bipartite graph of musicians and bands (Figure \ref{fig:musicband}(a)), but that is not our purpose here. 
+
+Figure \ref{fig:musicband}(b) shows a non-bipartite band-band layout using lines to represent links. The challenge here is representing links that start and end within the same \textit{GraphTiles} column, which do not exist in bipartite graphs. Lines and most of the other explicit link representations we discussed perform poorly in such cases, since they are only displayed when both endpoints are onscreen, which will happen only rarely within the same column.
+
+We believe interactive reordering is the best solution to this problem. In Figure \ref{fig:musicband}(c), the user selects the band `The Fartz', bringing all related bands onscreen or nearly so. Unrelated bands are dimmed out in the interface to further accentuate band connections.
+
+
+\section{Experiment: Comparison of explicit link representations}
+
+
+We considered how to display links explicitly on the mobile screen. It might be tempting simply to draw lines between linked nodes (Figure \ref{fig:linkrep}c), but \textit{GraphTiles} has unique characteristics that could make this solution untenable. As users scroll, nodes appear and disappear, meaning that linking lines do as well. Scrolling also causes the lines to move when they are onscreen, occluding a variety of other nodes and dynamically relocating link crossings (making a well-known drawback of link lines still worse). All of this dynamic behavior does not exist in most graph visualizations and could be quite disorienting during mobile search. .
+
+In creating alternative designs for displaying explicit links, we were (loosely) inspired by the grouping principles of Gestalt psychology ~\cite{RefWorks:562}. The \textit{proximity} principle places nearby items in the same group. Because we could not use proximity alone to display complex many-to-many relationships, we approximated proximity with an iconic representation of the neighboring column (Figure \ref{fig:linkrep}(d)). Rectangles in the representation indicate the presence of links to the node in the same position in the neighboring column. \textit{Similarity} groups items that have similar properties such as color or texture (Figure \ref{fig:linkrep}(b) and \ref{fig:linkrep}(e)). Here, nodes containing the outline color or a thumbnail of a neighboring node are linked to that node. Like link lines (which use the Gestalt principle of \textit{connectedness}), all of these representations must dynamically change as the user scrolls and nodes move, but the changes are much more restrained.
+
+\begin{figure*}[htb!]
+\centering
+\includegraphics[width=7in]{images/linkrep}
+\caption{Different explicit link representations for \textit{GraphTiles}. (a) \emph{text:} nodes with the same name are linked. (b) \emph{color:} nodes with the same color are linked. (c) \emph{connectedness:} nodes with lines between them are linked. (d) \emph{proximity:} nodes at/containing the same vertical position are linked. (e) \emph{texture:} nodes with/containing the same image are linked.}
+\label{fig:linkrep}
+\end{figure*}
+
+
+
+\subsection{Methods}
+
+Using IMDb as a testbed, we compared connectedness-inspired lines to our alternative designs in a controlled experiment, and included a text-based link display (Figure \ref{fig:linkrep}(a)) as a control condition. In this condition, nodes with the same text were linked. Note that because we were testing only explicit link representations, we did not enable interactive reordering in this experiment.
+
+We expected that connectedness-, color- and texture-inspired links would perform better than text-based or proximity-inspired links. Because of the unique dynamic qualities of the \textit{GraphTiles} visualization, we did not attempt to predict which link representation would be best.
+
+\subsubsection{Design}
+
+We used a fully crossed within subjects $5 \times 2 \times 2$ design. Link \textit{Depiction} had five levels: text-based as well as proximity-, color-, texture-, and connectedness-inspired representations. \textit{QueryType}, or the type of question asked, had two levels: a movie-person-movie (MPM) query or a person-movie-person (PMP) query. \textit{Size}, or the rough size of the surrounding graph neighborhood, had two levels: small or below median, and large or above median.
+
+
+\subsubsection{Participants and procedure}
+
+We had ten participants, all university students with normal or corrected-to-normal vision. We obtained informed consent from the participants, and asked them to read the instructions for the experiment. We then familiarized them with the task and link depictions using 10 training datasets, one for each combination of link \textit{Depiction} and \textit{QueryType}. Participants were free to ask verbal questions during training.
+
+Participants then each performed $120$ information seeking tasks, each using a different graph neighborhood in the IMDb database, with median size of 115 nodes. On average, they completed all their tasks in one hour. Every participant performed six trials with each of the $5 \times 2 \times 2 = 20$ experimental treatments. We formed five blocks of $24$ trials each, each block corresponding to one \textit{Depiction}. Thus participants performed all trials with the current \textit{Depiction} before moving on to the next. To combat the effects of fatigue and learning, we sampled all the orderings of \textit{Depiction} using a $5 \times 5$ Latin Square. Within each of these \textit{Depiction} blocks, we formed two 12-trial \textit{QueryType} blocks. Half of the participants performed MPM questions first, half performed PMP questions first. Within each \textit{QueryType} block, participants performed 6 trials with small neighborhoods and 6 with large neighborhoods. We randomized the order of these trials. To avoid any confound between treatments and graph neighborhoods, we randomized the match of graph to treatment. Each participant saw each neighborhood only once.
+
+For each task, participants answered a question displayed on a nearby monitor. 
+As for the \textit{QueryType}, we used the same method as the previous summative experiment.
+We recorded the time to complete each trial, and whether or not the participant performed the trial correctly. Participants were paid \$10 for their effort.
+
+
+
+\subsection{Results}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=3in]{images/depictiongraph}
+\caption{Average task completion times per depiction for the first experiment.}
+\label{fig:experiment1}
+\end{figure}
+
+All participants completed all trials correctly, so we report only on completion time here. On completion times, we performed a single, three-factor repeated measures ANOVA. All single variable effects were significant. 
+
+The connectedness-inspired link Depiction indeed supported the fastest information seeking performance ($F(4,36)=4.942, p<0.005$). Average completion times in seconds for each Depiction were: connectedness $10.1$s, texture $12.5$s, color $13.0$s, proximity $13.6$s, and text $15.7$s. We show the same times in Figure \ref{fig:experiment1}, along with standard error. Despite their drawbacks, link lines also have strengths: they are familiar to most viewers;  and they are simple, introducing only one primitive per link, while other representations require changes at both linked nodes.
+
+
+Participants were much faster when asked to locate a person (the MPM \textit{QueryType}) than when asked to locate a movie (PMP) ($F(1,9)=43.869, p<0.001$). Average completion times for person queries were 10.5s, and for movies 15.5s. This is likely an effect of graph size rather than some more subtle task difference. Recall that IMDb's API returned many more top actors working on a movie than top movies in which an actor worked. This meant that PMP neighborhoods contained many more nodes than MPM neighborhoods.
+
+Participants were faster when working with small graph Sizes than with large graph Sizes ($F(1,9)=83.911, p<0.001$). Average completion times for small graphs were $11.7$s, while for large graphs they were $14.2$s.
+
+The only significant interaction occurred between the \textit{QueryType} and \textit{Size} variables ($F(1,9)=25.824, p=0.001$). When participants were asked to find movies in PMP neighborhoods, increasing graph Size had a large effect on completion times ($13.4$s vs. $17.6$s). When they were asked to find persons in MPM neighborhoods, \textit{Size}'s effect was minor ($10.1$s vs. $10.9$s). In PMP neighborhoods, graphs were larger, so increasing \textit{Size} had a larger effect.
+
+Readers may wonder why average times in this experiment with \textit{GraphTiles} were lesser than they were in our first experiment. One cause may be the increased practice with \textit{GraphTiles} (10 training datasets) in this experiment.
+
+
+\subsection{Discussion}
+Results largely matched our expectations, with text-based and proximity-inspired links performing worst, texture- and color- inspired link \textit{Depictions} performing better, and connectedness-inspired link lines performing best. However, users were only about 20\% faster with link lines than with texture-inspired links containing thumbnails.
+
+
+
+\section{Conclusion and Future Work}
+
+As mobile devices become the dominant form of computing, mobile search will become increasingly important. In this paper we described \textit{GraphTiles}, a new search interface specifically designed to support open, imprecise, and near miss mobile queries. In an experimental evaluation, accessing the IMDb graph with \textit{GraphTiles} was nearly twice as fast as with the existing IMDb mobile web app.
+
+\textit{GraphTiles} could use design improvements to maintain visual continuity. When users change the central node, they can quickly become disoriented. Future experiments might study how well \textit{GraphTiles} supports \textit{both} precise and imprecise queries, open and near miss search, as well as non-bipartite graphs. Our current implementation is quite visual. \textit{GraphTiles} will need improvement for largely textual search domains. 
+
+We also plan to evaluate \textit{GraphTiles} on other devices such as tablets, where we might display larger neighborhoods. The comparative merits of each of our explicit link display techniques might be different when many more links must be displayed at the same time.
+
+%\begin{table}[h]
+%\centering
+%\begin{center} {\footnotesize
+%{\renewcommand{\arraystretch}{1.2}%
+%\begin{tabular}{|l||l|}
+%\hline
+%\textbf{independent variable}  &  \textbf{ANOVA of time} \\
+%\hline
+% &     F(,)=, p= \\
+%\hline
+%\end{tabular} }} \quad
+%\end{center}
+%\caption{\footnotesize Significant main effects on time.}
+%\label{table:timeAnova}
+%\end{table}
+%\balance
+
+% Balancing columns in a ref list is a bit of a pain because you
+% either use a hack like flushend or balance, or manually insert
+% a column break.  http://www.tex.ac.uk/cgi-bin/texfaq2html?label=balance
+% multicols doesn't work because we're already in two-column mode,
+% and flushend isn't awesome, so I choose balance.  See this
+% for more info: http://cs.brown.edu/system/software/latex/doc/balance.pdf
+%
+% Note that in a perfect world balance wants to be in the first
+% column of the last page.
+%
+% If balance doesn't work for you, you can remove that and
+% hard-code a column break into the bbl file right before you
+% submit:
+%
+% http://stackoverflow.com/questions/2149854/how-to-manually-equalize-columns-
+% in-an-ieee-paper-if-using-bibtex
+%
+% Or, just remove \balance and give up on balancing the last page.
+%
+%\balance
+
+\bibliographystyle{acm-sigchi}
+\bibliography{sample}
+\end{document}

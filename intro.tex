@@ -1,0 +1,12 @@
+%The majority of new computing devices sold are mobile ~\cite{IDC1,IDC2}. 
+Mobile search is becoming a prevalent everyday activity for millions of users to search, locate and discover information on-the-go \cite{Church:2011}. Most people use the mobile Internet for \textit{directed} searches, where the goal is to find information about a predetermined topic of interest \cite{1143118}. Fact-finding, where the user searches for a specific piece of information, and the more open subject-based exploration, where the user seeks basic understanding of a concept and related terms, are two examples of this kind of task. Much of this information contains relations and connections, such as IMDb~\cite{imdb} (movies to cast), Pandora~\cite{pandora} (songs to artists) and Facebook~\cite{Facebook} (friends to friends). 
+
+
+Mobile search interfaces offer little more than traditional desktop search, with most using simple adaptations of their web interfaces to meet the display characteristics of
+mobile handsets. Yet, the primary method of web navigation remains hyperlinks \cite{206540}.  These are well-suited for depth-first traversal, where a user first selects a link on the current page, which in turn loads a new page. This process repeats until the user finds the needed information or the current search path is abandoned returning the user to the initial search. Such web navigation techniques tend to encourage `web surfing,' when a user starts in search of some information, but is sidetracked by tangential links.
+
+In this paper, we present \textit{GraphTiles}, a visual search interface for mobile devices, particularly for data in a relational graph format. The interface displays an incomplete portion of a local link neighborhood: a thumbnail of the current page alone in the left column, some pages one link away in the middle column, and other pages two links away in the right column. To see the complete neighborhood, users can scroll the central and right columns vertically.
+
+While this layout implies many links, it does not indicate exactly where the links are between the second and third columns. Users can reveal these locations by selecting a page thumbnail from these columns, triggering an \textit{interactive reordering} that highlights pages linked to the selection and places them onscreen or nearly so. Users can restore the original (better known) order by deselecting the page.
+
+

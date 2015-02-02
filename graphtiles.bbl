@@ -1,0 +1,124 @@
+\begin{thebibliography}{10}
+
+\bibitem{Facebook}
+{F}acebook.
+\newblock \url{http://wwwfacebook.com}.
+
+\bibitem{imdb}
+Internet movie database (imdb).
+\newblock \url{http://www.imdb.com}.
+
+\bibitem{linkedin}
+Linkedin.
+\newblock \url{http://www.linkedin.com}.
+
+\bibitem{pandora}
+Pandora.
+\newblock \url{http://www.pandora.com}.
+
+\bibitem{seattleband}
+{T}he {S}eattle {B}and {M}ap.
+\newblock \url{http://www.seattlebandmap.com}.
+
+\bibitem{Amini:2012}
+Amini, S., Brush, A., Krumm, J., Teevan, J., and Karlson, A.
+\newblock Trajectory-aware mobile search.
+\newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, CHI '12, ACM (New York, NY, USA, 2012), 2561--2564.
+
+\bibitem{Balasubramanian:2012}
+Balasubramanian, A., Balasubramanian, N., Huston, S.~J., Metzler, D., and
+  Wetherall, D.~J.
+\newblock Findall: A local search engine for mobile phones.
+\newblock In {\em Proceedings of the 8th International Conference on Emerging
+  Networking Experiments and Technologies}, CoNEXT '12, ACM (New York, NY, USA,
+  2012), 277--288.
+
+\bibitem{206540}
+Catledge, L.~D., and Pitkow, J.~E.
+\newblock Characterizing browsing strategies in the world-wide web.
+\newblock In {\em Proceedings of the Third International World-Wide Web
+  conference on Technology, tools and applications}, Elsevier North-Holland,
+  Inc. (New York, NY, USA, 1995), 1065--1073.
+
+\bibitem{RefWorks:658}
+Chittaro, L.
+\newblock Visualizing information on mobile devices.
+\newblock {\em Computer 39}, 3 (2006), 40--45.
+
+\bibitem{Church:2011}
+Church, K., and Oliver, N.
+\newblock Understanding mobile web and mobile search use in today's dynamic
+  mobile landscape.
+\newblock In {\em Proceedings of the 13th International Conference on Human
+  Computer Interaction with Mobile Devices and Services}, MobileHCI '11, ACM
+  (New York, NY, USA, 2011), 67--76.
+
+\bibitem{Cui:2008}
+Cui, Y., and Roto, V.
+\newblock How people use the web on mobile devices.
+\newblock In {\em Proceedings of the 17th international conference on World
+  Wide Web}, WWW '08, ACM (New York, NY, USA, 2008), 905--914.
+
+\bibitem{springerlink:10.1007/978-3-642-18469-7-14}
+Da~Lozzo, G., Di~Battista, G., and Ingrassia, F.
+\newblock Drawing graphs on a smartphone.
+\newblock 153--164.
+\newblock 10.1007/978-3-642-18469-7-14.
+
+\bibitem{RefWorks:906}
+Hao, J., and Zhang, K.
+\newblock A mobile interface for hierarchical information visualization and
+  navigation.
+\newblock In {\em Consumer Electronics, 2007. ISCE 2007. IEEE International
+  Symposium on}, IEEE (2007), 1--7.
+
+\bibitem{RefWorks:908}
+Karstens, B.
+\newblock Visualization of complex structures on mobile handhelds.
+\newblock In {\em In Proceedings of International Workshop on Mobile Computing}
+  (2003), 17--18.
+
+\bibitem{1143118}
+Kellar, M., Watters, C., and Shepherd, M.
+\newblock The impact of task on the usage of web browser navigation mechanisms.
+\newblock In {\em GI '06: Proceedings of Graphics Interface 2006}, Canadian
+  Information Processing Society (Toronto, Ont., Canada, Canada, 2006),
+  235--242.
+
+\bibitem{Lane:2010}
+Lane, N.~D., Lymberopoulos, D., Zhao, F., and Campbell, A.~T.
+\newblock Hapori: Context-based local search for mobile phones using community
+  behavioral modeling and similarity.
+\newblock In {\em Proceedings of the 12th ACM International Conference on
+  Ubiquitous Computing}, Ubicomp '10, ACM (New York, NY, USA, 2010), 109--118.
+
+\bibitem{Lee:2012}
+Lee, U., Kang, H., Yi, E., Yi, M., and Kantola, J.
+\newblock Understanding mobile q\&a usage: an exploratory study.
+\newblock In {\em SIGCHI '12: ACM SIGCHI Conference on Human Factors in
+  Computing Systems} (2012), 3215--3224.
+
+\bibitem{Lymberopoulos:2011}
+Lymberopoulos, D., Zhao, P., Konig, C., Berberich, K., and Liu, J.
+\newblock Location-aware click prediction in mobile local search.
+\newblock In {\em Proceedings of the 20th ACM International Conference on
+  Information and Knowledge Management}, CIKM '11, ACM (New York, NY, USA,
+  2011), 413--422.
+
+\bibitem{RefWorks:896}
+Pattath, A., Ebert, D.~S., May, R.~A., Collins, T.~F., and Pike, W.
+\newblock Real-time scalable visual analysis on mobile devices.
+\newblock R.~Creutzburg and J.~H. Takala, Eds., vol.~6821, SPIE (2008), 682102.
+
+\bibitem{chi2008}
+Sohn, T., Li, K.~A., Griswold, W.~G., and Hollan, J.~D.
+\newblock A diary study of mobile information needs.
+\newblock {\em In Proceedings of CHI'08, ACM\/} (2008), 433--442.
+
+\bibitem{RefWorks:562}
+Wertheimer, M.
+\newblock Laws of organization in perceptual forms.
+\newblock {\em Psychologische Forschung 4\/} (1923), 301--350.
+
+\end{thebibliography}
