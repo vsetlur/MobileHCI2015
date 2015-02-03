@@ -12,3 +12,11 @@
 *.gz
 
 *.aux
+
+*.bbl
+
+*.blg
+
+*.log
+
+*.gz
