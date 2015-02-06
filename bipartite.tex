@@ -1,0 +1,8 @@
+While real and practical, the IMDb graph is bipartite: nodes contain two disjoint sets of either people (e.g. actors) or movies. \textit{GraphTiles} quite appropriately exploits this structure, placing people and movies in different columns. However if \textit{GraphTiles} is to find use with more general applications, it must be tested with non-bipartite graphs. 
+
+With this goal in mind, we used \textit{GraphTiles} to the Seattle Band Map . In this database, music bands from the Pacific Northwest are linked if they share band members or have collaborated with one another. By preprocessing the database, we could create a bipartite graph of musicians and bands where musicians and bands (Figure \ref{fig:musicband}(a)), but that is not our purpose here. 
+
+Figure (b) shows a non-bipartite band-band layout using lines to represent links. The challenge here is representing links that start and end within the same \textit{GraphTiles} column, which do not exist in bipartite graphs. Lines and most of the other explicit link representations we discussed perform poorly in such cases, since they are only displayed when both endpoints are onscreen, which will happen only rarely within the same column.
+
+We believe interactive reordering is the best solution to this problem. In Figure \ref{fig:musicband}(c), the user selects the band `The Fartz', bringing all related bands onscreen or nearly so. Unrelated bands are dimmed out in the interface to further accentuate band connections.
+
