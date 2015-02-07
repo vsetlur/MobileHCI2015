@@ -1,3 +1,13 @@
+\begin{figure*}[t]
+\centering
+\subfigure[Band and artist relationship]{\includegraphics[width=1.4in]{images/bab}}
+\subfigure[Band relationship]{\includegraphics[width=1.4in]{images/bbb}}
+\subfigure[Interactive reordering with dimmed image when not related.]{\includegraphics[width=1.4in]{images/fartz_reordering}}
+\caption{Applying \textit{GraphTiles} to Seattle's music band data.}
+\label{fig:musicband}
+\end{figure*}
+
+
 To test the value of \textit{GraphTiles} in imprecise search, we performed an experiment comparing it to a standard mobile interface to a well known structured online dataset: IMDb. An imprecise search making use of IMDb is often similar to this: a user wants to recommend a movie to a friend, but cannot remember the name of that movie, nor the name of any actors in that movie. This makes using standard search interfaces somewhat difficult. They do however know that one of the actors in the movie they want to recommend was also in a different movie they can name. They navigate from movie to actor to movie. We focused on answering imprecise queries of that nature. 
 
 Figure \ref{fig:teaser} shows a comparison of the visuals used in \textit{GraphTiles} and IMDb's mobile website (\url{http://m.imdb.com}) to answer movie-person-movie(MPM) queries of this type, as well as person-movie-person(PMP) \textit{QueryTypes}. We expected that \textit{GraphTiles} would allow users to perform imprecise search more quickly than IMDb's web app.
@@ -10,15 +20,6 @@ Our experiment had $20$ participants, all of them employees at a large corporate
 We used a fully crossed within subjects $2 \times 2$ design. As participants performed the tasks, we systematically altered two variables. \textit{Interface}, or the tool used to access the IMDb information, had two levels: \textit{GraphTiles} and the IMDb web app. \textit{QueryType} had two levels: a movie-person-movie (MPM) query or a person-movie-person (PMP) query. If \textit{QueryType} was MPM, we asked participants to find the person who worked in two given movies. In this case, the central node at the left of the visualization was always a movie. If \textit{QueryType} was PMP, we asked participants to find the movie on which two given people collaborated. In this case, the central node at the left of the visualization was always a person. To answer the question, participants used a phone to scroll in the right column to find the second person's node, and then scroll in the middle column to find the movie connecting the two people, and select it.
 
 \textit{GraphTiles} displayed link lines and used interactive reordering. Every participant performed $30$ trials with each of the $2 \times 2 = 4$ experimental treatments. We grouped trials by \textit{Interface} into two blocks of $60$ trials each. Thus participants performed all trials with the current Interface before moving on to the next. To combat the effects of fatigue and learning, we used complete counterbalancing across participants: half of them performed the \textit{GraphTiles} block first, the other half the web app block first. Within each of these blocks, we randomly ordered the levels of \textit{QueryType}. We randomized the order of graph neighborhoods without replacement, so that each participant saw each neighborhood exactly once.
-
-\begin{figure*}[t]
-\centering
-\subfigure[Band and artist relationship]{\includegraphics[width=1.4in]{images/bab}}
-\subfigure[Band relationship]{\includegraphics[width=1.4in]{images/bbb}}
-\subfigure[Interactive reordering with dimmed image when not related.]{\includegraphics[width=1.4in]{images/fartz_reordering}}
-\caption{Applying \textit{GraphTiles} to Seattle's music band data.}
-\label{fig:musicband}
-\end{figure*}
 
 \subsubsection{Apparatus}
 
