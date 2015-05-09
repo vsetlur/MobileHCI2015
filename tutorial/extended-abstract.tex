@@ -1,0 +1,181 @@
+\documentclass{sigchi-ext}
+% Please be sure that you have the dependencies (i.e., additional
+% LaTeX packages) to compile this example.
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[scaled=.92]{helvet} % for proper fonts
+\usepackage{graphicx} % for EPS use the graphics package instead
+\usepackage{balance}  % for useful for balancing the last columns
+\usepackage{booktabs} % for pretty table rules
+\usepackage{ccicons}  % for Creative Commons citation icons
+\usepackage{ragged2e} % for tighter hyphenation
+\newenvironment{tight_itemize}{\begin{itemize} \itemsep
+-2pt}{\end{itemize}}
+% \usepackage{marginnote} \usepackage[shortlabels]{enumitem}
+% \usepackage{paralist}
+
+%% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP --
+% \copyrightinfo{Permission to make digital or hard copies of all or
+% part of this work for personal or classroom use is granted without
+% fee provided that copies are not made or distributed for profit or
+% commercial advantage and that copies bear this notice and the full
+% citation on the first page. Copyrights for components of this work
+% owned by others than ACM must be honored. Abstracting with credit is
+% permitted. To copy otherwise, or republish, to post on servers or to
+% redistribute to lists, requires prior specific permission and/or a
+% fee. Request permissions from permissions@acm.org.\\
+% {\emph{CHI'14}}, April 26--May 1, 2014, Toronto, Canada. \\
+% Copyright \copyright~2014 ACM ISBN/14/04...\$15.00. \\
+% DOI string from ACM form confirmation}
+%% EXAMPLE END
+
+\title{Emerging Research in Mobile Visualization}
+
+\numberofauthors{2}
+% Notice how author names are alternately typesetted to appear ordered
+% in 2-column format; i.e., the first 4 autors on the first column and
+% the other 4 auhors on the second column. Actually, it's up to you to
+% strictly adhere to this author notation.
+\author{%
+  \alignauthor{%
+    \textbf{Benjamin Watson}\\
+    \affaddr{North Carolina State University} \\
+    \email{bwatson@ncsu.edu} }\alignauthor{%
+    \textbf{Vidya Setlur}\\
+    \affaddr{Tableau Software}\\
+    \email{vsetlur@tableau.com}\\
+    }  }
+
+% Paper metadata (use plain text, for PDF inclusion and later
+% re-using, if desired)
+\def\plaintitle{SIGCHI Extended Abstracts Sample File: Note Initial
+  Caps} \def\plainauthor{First Author, Second Author, Third Author,
+  Fourth Author, Fifth Author, Sixth Author}
+\def\plainkeywords{Authors' choice; of terms; separated; by
+  semicolons; include commas, within terms only; required.}
+\def\plaingeneralterms{Documentation, Standardization}
+
+%% Set up our PDF with metadata
+\hypersetup{%
+  pdftitle={\plaintitle}, pdfauthor={\plainauthor},
+  pdfkeywords={\plainkeywords}, }
+
+% \reversemarginpar%
+
+\begin{document}
+
+\maketitle
+
+% Uncomment to disable hyphenation (not recommended)
+% https://twitter.com/anjirokhan/status/546046683331973120
+\RaggedRight{} 
+
+\abstract{Data visualization has become an inherent part of our daily lives - whether it is viewing the latest weather on a map, or the current company stock price. As people shift to mobiles as their primary source of information, we are faced with exploring new visuals and interfaces that are optimized for small screens and constrained input modalities.}
+
+\section{Length}
+2 hours
+
+\section{Learning Goals}
+In this tutorial, attendees will:
+\begin{tight_itemize}
+\item learn why visualization is needed for mobile devices
+\item understand the unique data made available by mobile devices 
+\item discuss mobile constraints for visualization
+\item compare and critique existing mobile visualizations
+\item review existing mobile visualization research
+\item examine and discuss open research problems in mobile visualization 
+\end{tight_itemize}
+
+\section{Intended Audience}
+Experienced mobile developers or researchers, with little knowledge of visualization research
+
+\section{Covered Topics}
+
+This tutorial will cover the following aspects:
+
+\subsection{The case for mobile visualization:} When first heard, the term `mobile visualization' may sound like an oxymoron. Mobile dominance, sensing, control and monitoring ensure that this is quite far from the truth. First, as measured by a wide range of statistics, mobile is the dominant form of computing worldwide, and therefore unavoidably, visualization is mobile too. Second, mobile computing is almost always coupled with mobile sensing and capture, including traces of human movement, communication and work; data types such as text, sound, imagery and video; and crowdsourced, real time, big data flows. It is unavoidable that people being measured on the go will want to see their measurements on the go. Third, as we realize the internet of things, mobiles will rapidly become the universal remote. Managing the complexity of this remote will require visualization. Finally, as the pace with which we must absorb information flows continues to increase, visualization will enable us to do so.
+
+\subsection{Design and interaction guidelines:} How must mobile visualization differ from traditional visualization? It must respond to perceptual, interactive, contextual and data constraints. First, mobile displays are small, viewed during motion and through glare and grime. Mobile visualizations should therefore display information more efficiently, and filter to maintain clarity. Second, because mobile input is dominated by touch, the input surface is effectively coarser than the display surface. Interface elements in mobile visualizations should require less precision, and interactions must maintain more visual continuity as users move through their data. Third, mobile use is typified by movement, multitasking, and interruption. Visualizations should filter still more to accommodate this behavior, and even adjust the degree of this filtering to respond to the sensed degree of attention that users can bring to their viewing. Finally, while traditional visualizations typically depict data known in advance, mobile data is often streaming and incomplete. Mobile visualizations must depict this uncertainty, and employ progressive techniques to compensate for missing data.
+
+\subsection{Real-world examples:} Visualization is already widespread in existing mobile applications, with financial apps visualizing money, fitness apps visualizing steps, health apps visualizing eating and symptoms, marketing apps visualizing social activity, and home automation apps visualizing the state of devices in users' houses. With the demand for visualization in such apps increasing, companies have begun creating mobile visualization tools. For example, Tableau Software recently announced a tablet-based visualization product codenamed Project Elastic (\url{http://www.tableau.com/be-elastic}) to help users answers questions about their data with simple gestures and interactions.
+
+\subsection{Current research:} For analysis and presentation of data visualizations in general, resizing is particularly critical in the context of a dashboard with limited real-estate, and/or when visualizations created on one display must then rendered on a different display. The major challenge associated with techniques supporting resizing and creating multi-scale visualization is the significant number of variations that must be considered. In fact, it is almost impossible for a visualization designer to consider every possible combination of display resolution and size, viewport dimensions, and aspect ratio. It is hence crucial for research to explore smarter ways to automatically adapt and represent a visualization based upon different scales. Some of this work is inspired by cartographic generalization, which is the process of maintaining the legibility of a map at any given scale [cite]. 
+
+In addition to traditional visualization graphs, web content is becoming an important source of information for search and consumption on the mobile. As the amount of information available on these small-screen, `on-the-go' types of devices continues to grow, it is essential to prevent users from wading through a morass of irrelevant content to find a single piece of relevant information. Most people use the mobile Internet for directed searches, where the goal is to find information about a predetermined topic of interest [cite]. Fact-finding, where the user searches for a particular piece of information, and subject-based exploration, where the user seeks basic understanding of a concept and related terms, are two examples of this kind of task. Typical web navigation techniques tend to support undirected searching, which often results in the unintentional behavior of `web surfing.' There is a growing body of research work that focusses on making the experience of web search on the mobile more effective through icons for previewing content and improving memorability, for example \cite{Setlur:SVM:2005,Setlur:2011}. In addition, retargeting content and media through better layout algorithms based on the semantics of the data is yet another research vector \cite{Setlur2007}.
+
+\subsection{Future directions:} If mobile visualization is to realize its potential, there are a broad range of questions that researchers must answer. The first group of questions focuses on enabling techniques. As our discussion of guidelines makes clear, mobile visualizations will have to be simplified and filtered much more than traditional visualizations. How can this be done? Could we learn from the simplifying techniques used by map designers to enable `mobile generalization?' Mobile data will often be streaming and noisy. Can we improve existing data wrangling techniques to create `just-in-time visualization?' To complete this group, mobile visualization takes place in much more diverse settings than traditional visualization. How should visualization respond to this context? 
+
+New mobile applications for visualization form the second set of questions for future research. Many now consume the bulk of their news and information on mobile devices, and visualizations and info graphics are becoming an increasingly important element of that communication. How can visualizations become effective tools for communication, particularly on mobile devices? There is also a large class of mobile applications focusing on behavior modification for reasons of health, sustainability and politics. How can mobile visualizations play an effective role in persuasion? Mobile applications helping users locate themselves and search for information are already ubiquitous, but standardized by one provider. How location and search display be specialized toward specific uses and context? Finally, as ever more people and devices move online, how can mobile visualization be used effectively to maintain awareness of this growing information stream on the go?
+
+\section{Activities and schedule}
+We propose the following two-hour program and exercises:
+\begin{itemize}
+\item Part 1: Introduction, motivation and theory
+\begin{itemize}
+\item 5 mins: Welcome and introductions (Watson \& Setlur)
+for a later exercise, attendees start downloading three different fitness apps
+\item 15 mins: Motivation (Watson lectures)
+mobile dominance, sensing, control and monitoring
+\item 15 mins: Guidelines and constraints for mobile visualization (Watson lectures)
+constraints from perception, interaction, context and data
+\item 5 mins: Discussion (Watson \& Setlur lead)
+focus on critique and suggestion of constraints
+\end{itemize}
+\item Part 2: Visualization in the field
+\begin{itemize}
+\item 25 mins: Review of mobile visualization in the field (Setlur lectures)
+applications: finance, fitness, health, marketing, home automation
+tools: Tableau Elastic
+\item 15 mins: Critique of fitness app visualizations (Setlur \& Watson lead)
+attendees offer critique of fitness app visuals they have downloaded
+\end{itemize}
+\item Part 3: Visualization research
+\begin{itemize}
+\item 15  mins: Review of mobile visualization research (Setlur lectures)
+maps, graphs, dashboards, search results, icons, images
+\item 15 mins: Open problems in mobile visualization (Watson lectures)
+awareness, communication, persuasion, locating, search, mobile `generalization', just-in-time visualization
+\item 5 mins: Open discussion (Watson \& Setlur lead)
+\item 5 mins: Wrap up
+\end{itemize}
+\end{itemize}
+
+\section{Materials for Participants}
+Participants will be directed to the tutorial site, where they will find links to the tutorial slides, demos and prototypes for examination during the session, and a bibliography of relevant references. If the conference will be distributing flash drives, we will be happy to put this content on them.
+
+\balance
+\bibliographystyle{SIGCHI-Reference-Format}
+\nocite{*}
+\bibliography{sample}
+
+\newpage
+
+\section{Instructor Biographies}
+\subsection{Benjamin Watson}
+Associate Professor\\
+North Carolina State University\\
+Department Computer Science\\
+email: bwatson@ncsu.edu, tel: +1 919 513 0325\\
+website: watson.csc.ncsu.edu\\
+\vspace{2mm}
+Watson's Visual Experience Lab studies visual technologies that move people: how digitally created imagery affects human emotion, thinking and behavior. His work spans computer graphics, human-computer interfaces, visualization, psychology and design. Much of his work has migrated to the mobile platform, as the most pervasive of visual interfaces. Watson co-chaired the Graphics Interface 2001, IEEE Virtual Reality 2004 and ACM Interactive 3D Graphics and Games 2006 conferences, and was co-program chair of I3D 2007. He served several years as Conference Chair on the VGTC. Watson is an ACM and senior IEEE member. He earned his doctorate at the Georgia Institute of Technology. 
+
+\subsection{Vidya Setlur}
+Research Scientist\\
+Tableau Software\\
+email: vsetlur@tableau.com, tel: +1 650 796 6097\\
+website: http://vidyasetlur.com\\
+\vspace{2mm}
+
+Vidya Setlur is a research scientist at Tableau Software. For several years before that, she was a principal research scientist at Nokia Research Center. Her research interest lies at the intersection of natural language processing and computer graphics. Her work involves new rendering algorithms and mobile interfaces, particularly in the area of iconography, visualization and content retargeting for small displays. In addition to industry research, she enjoys teaching and giving courses at various academic and conference settings, including an appointment with Carnegie Mellon University (Silicon Valley campus) as an adjunct professor. She earned her doctorate in Computer Graphics at Northwestern University in 2005. 
+
+%\balance{} 
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
