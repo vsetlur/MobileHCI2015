@@ -8,9 +8,11 @@
 \end{figure*}
 
 
-To test the value of \textit{GraphTiles} in imprecise search, we performed an experiment comparing it to a standard mobile interface for a well known structured online dataset: IMDb. An imprecise search making use of IMDb is often similar to this: a user wants to recommend a movie to a friend, but cannot remember the name of that movie, nor the name of any actors in that movie. This makes using standard search interfaces somewhat difficult. They do however know that one of the actors in the movie they want to recommend was also in a different movie they can name. They navigate from movie to actor to movie. We focused on answering imprecise queries of that nature. 
+To confirm that \textit{GraphTiles} supported imprecise search well, we performed an experiment comparing it to a standard mobile information interface. We expected that the specialized \textit{GraphTiles} interface would allow users to perform imprecise search more quickly than an interface supporting the full continuum of information-seeking.
 
-Figure \ref{fig:teaser} shows a comparison of the visuals used in \textit{GraphTiles} and IMDb's mobile website (\url{http://m.imdb.com}) to answer movie-person-movie(MPM) queries of this type, as well as person-movie-person(PMP) \textit{QueryTypes}. We expected that \textit{GraphTiles} would allow users to perform imprecise search more quickly than IMDb's web app.
+As a typical mobile information interface, we chose the IMDb mobile web app. An imprecise search making use of IMDb is often similar to this: a user wants to recommend a movie to a friend, but cannot remember the name of that movie, nor the name of any actors in that movie. This makes using standard search interfaces somewhat difficult. They do however know that one of the actors in the movie they want to recommend was also in a different movie they can name. They navigate from movie to actor to movie. We focused on answering imprecise queries of that nature. 
+
+Figure \ref{fig:teaser} shows a comparison of the visuals used in \textit{GraphTiles} and IMDb's mobile website (\url{http://m.imdb.com}) to answer movie-person-movie(MPM) queries of this type, as well as person-movie-person(PMP) \textit{QueryTypes}.
 
 
 \subsection{Method}
@@ -28,7 +30,7 @@ We implemented \textit{GraphTiles} on three Samsung SGH-i917 phones running Wind
 We obtained our IMDb graph neighborhoods using the official IMDb API (\url{http://www.imdb.com/interfaces}), obtaining a large cross section of its database (approximately 3GB in size). We then randomly selected 60 nodes within the IMDb graph describing well known actors (supporting PMP queries), and 60 nodes describing well known movies (supporting MPM queries). We then sampled the two-link neighborhood around each actor (PMP) node by adding the top movies linked to it as indicated by IMDb's own API call; and then for each of those top movies, adding its top actors, again as indicated by IMDb's API call. We created two-link neighborhoods around movie (MPM) nodes similarly. The number of top movies returned by IMDb's API was generally much lower than the number of top actors. 
 
 
-\subsection{Results and Discussion}
+\subsection{Results}
 
 All participants performed all trials correctly, so we report only completion times here. We tested significance using a two-factor repeated measures ANOVA. Only the two single variable effects were significant; they did not interact. 
 
@@ -36,6 +38,10 @@ When using \textit{GraphTiles}, participants were significantly ($F(1,19)=2291.8
 
 Although its effect was significant ($F(1,19)=11.27$, $p<0.005$), \textit{QueryType}'s effect was not meaningful. The difference in completion times when participants looked for movies rather than persons was 0.6s: (25.0s for movies, 24.4s for persons). The likely explanation for this effect was the consistent differences in MPM vs. PMP neighborhoods.
 
-Results in fact exceeded our expectations, with \textit{GraphTiles} users almost twice as fast as IMDb web app users. It should be said that \textit{GraphTiles} was designed specifically for imprecise search; IMDb is a more general tool. What remains to be seen is whether or not a single interface can support both precise and imprecise search well.
 
+\subsection{Discussion}
 
+Results in fact exceeded our expectations, with \textit{GraphTiles} users almost twice as fast as IMDb web app users. 
+% this would be a good place to discuss results in more detail. Why was it faster?
+
+Although the degree of \texit{GraphTiles}'s superiority was surprising, that superiority itself was not. \textit{GraphTiles} was designed specifically for imprecise search; IMDb is a more general tool. What remains to be seen is whether or not a single interface can support the full continuum of search generality well. Future work might also attempt to extend our results with other and more types of imprecise search, and by examining the performance of \textit{GraphTiles} with general and indeed precise search.
