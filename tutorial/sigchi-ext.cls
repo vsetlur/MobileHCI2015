@@ -294,20 +294,8 @@
 
 % -----------------------------------------------------------------------------
 % Default copyright strip
-\copyrightinfo{Paste the appropriate copyright statement here. ACM
-  now supports three different copyright statements:
-  \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
-  \item ACM copyright: ACM holds the copyright on the work. This is
-    the historical approach.
-  \item License: The author(s) retain copyright, but ACM receives an
-    exclusive publication license.
-  \item Open Access: The author(s) wish to pay for the work to be open
-    access. The additional fee must be paid to ACM.
-  \end{itemize}
-  This text field is large enough to hold the appropriate release
-  statement assuming it is single spaced in a sans-serif 7 point
-  font. \\ \textcolor{red}{Every submission will be assigned their own
-    unique DOI string to be included here.}}
+\copyrightinfo{Permission to make digital or hard copies of part or all of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for third-party components of this work must be honored. For all other uses, contact the Owner/Author.Copyright is held by the owner/author(s).MobileHCI '15 Adjunct, August 25-28, 2015, Copenhagen, Denmark ACM 978-1-4503-3653-6/15/08. \\
+\textcolor{red}{http://dx.doi.org/10.1145/2786567.2786571}}
 
 % -----------------------------------------------------------------------------
 % Including bibspacing.sty inline from http://bit.ly/1vlKdb0
